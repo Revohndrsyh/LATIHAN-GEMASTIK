@@ -1,5 +1,4 @@
-readme_content = """
-# 📊 Kesimpulan Analisis Sleep Health and Lifestyle Dataset
+# Kesimpulan Analisis Sleep Health and Lifestyle Dataset
 
 ## 1. Klasifikasi – Quality of Sleep
 
