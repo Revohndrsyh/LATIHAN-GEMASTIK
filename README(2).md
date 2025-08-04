@@ -51,7 +51,3 @@ Menggunakan model regresi untuk memprediksi variabel target `months_open` berdas
 
 ### 🧠 Kesimpulan
 > Analisis yang digunakan mencakup pendekatan **deskriptif**, **eksploratif**, dan **prediktif**, untuk menggali wawasan dari data pasar serta membangun dasar model prediksi sederhana.
-
-Jika ingin dikembangkan lebih lanjut, bisa diarahkan ke:
-- Clustering pasar berdasarkan jenis produk (*Unsupervised Learning*)
-- Klasifikasi jenis pasar berdasarkan lokasi atau karakteristik lainnya
