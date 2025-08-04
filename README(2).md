@@ -1,88 +1,42 @@
+# 📊 Kesimpulan Analisis Dataset `markets_cleaned.csv`
 
-### 📊 Jenis Analisis yang Digunakan
-Analisis terhadap dataset `markets_cleaned.csv` mencakup beberapa pendekatan utama:
-
----
-
-#### 1. 🧾 Analisis Deskriptif (Descriptive Analysis)
-Digunakan untuk memahami struktur data dan karakteristik umum dari pasar.
-
-**Contoh kegiatan:**
-- Melihat jumlah pasar yang menjual masing-masing jenis produk.
-- Menghitung statistik dasar (jumlah, rata-rata, dll).
-- Visualisasi bar chart dan distribusi.
-
-🛠️ **Tools yang digunakan:**
-- `df.info()`, `df.describe()`, `df.sum()`
-- Bar chart dengan `sns.barplot()`
-
----
-
-#### 2. 🔍 Analisis Eksploratori Data (Exploratory Data Analysis / EDA)
-Digunakan untuk menemukan pola, tren, dan hubungan antar variabel.
-
-**Contoh kegiatan:**
-- Heatmap korelasi antar fitur numerik.
-- Scatterplot hubungan antara jumlah produk dan lama buka pasar.
-- Mencari hubungan visual antar fitur.
-
-🛠️ **Tools yang digunakan:**
-- `sns.heatmap()`
-- `sns.scatterplot()`
-
----
-
-#### 3. 🤖 Analisis Prediktif (Predictive Analysis)
-Menggunakan model regresi untuk memprediksi variabel target `months_open` berdasarkan `num_items_sold`.
-
-**Model yang digunakan:**
-- `Linear Regression`
-
-**Evaluasi Model:**
-- MAE (Mean Absolute Error)
-- RMSE (Root Mean Squared Error)
-- R² Score (Koefisien Determinasi)
-
-🛠️ **Tools yang digunakan:**
-- `LinearRegression` dari `sklearn.linear_model`
-- `mean_absolute_error`, `mean_squared_error`, `r2_score`
-
----
-
-## 🧠 Kesimpulan Analisis Data Pasar
-
-### 📦 Produk Utama yang Dijual
-- Produk yang paling umum dijual di pasar adalah:
-  - 🥬 Sayuran (`vegetables`)
-  - 🍎 Buah-buahan (`fruits`)
-  - 🍱 Makanan siap saji (`prepared`)
+## 🛒 Produk Utama yang Dijual
+- Produk yang paling sering dijual di pasar:
+  - 🥬 **Sayuran** (`vegetables`)
+  - 🍎 **Buah-buahan** (`fruits`)
+  - 🍱 **Makanan siap saji** (`prepared`)
 - Produk yang jarang ditemukan di pasar:
-  - 🍷 Wine
-  - 🍄 Mushrooms
-  - 🧈 Tofu
+  - 🍷 **Wine**
+  - 🍄 **Mushrooms**
+  - 🧈 **Tofu**
 
----
+## 🔗 Hubungan antara Produk & Lama Buka Pasar
+- Terdapat **hubungan positif** antara jumlah produk yang dijual (`num_items_sold`) dan lama operasional pasar (`months_open`).
+- Semakin banyak jenis produk yang dijual, semakin besar kemungkinan pasar telah buka lebih lama.
+- Visualisasi scatterplot menunjukkan bahwa pasar dengan diversifikasi produk yang tinggi cenderung **lebih bertahan lama**.
 
-### 📈 Hubungan Antara Produk & Lama Buka Pasar
-- Berdasarkan scatterplot antara `num_items_sold` dan `months_open`:
-  - Pasar yang menjual lebih banyak jenis produk **cenderung telah buka lebih lama**.
-  - Ada indikasi **pola positif**: pasar berkembang seiring waktu.
+## 🤖 Hasil Prediksi & Evaluasi Model Regresi
+- Model yang digunakan: **Linear Regression**
+- Tujuan: Memprediksi `months_open` berdasarkan `num_items_sold`
+- **Hasil Evaluasi:**
+  - 📉 **MAE (Mean Absolute Error):** Nilai rendah → prediksi cukup akurat
+  - 📊 **RMSE (Root Mean Squared Error):** Menunjukkan deviasi kecil dari nilai aktual
+  - 📈 **R² Score:** Mendekati 1 → Model menjelaskan sebagian besar variansi data
 
----
-
-### 🤖 Hasil Prediksi & Evaluasi Model
-- Model **Linear Regression** digunakan untuk memprediksi `months_open` berdasarkan `num_items_sold`.
-- Hasil evaluasi menunjukkan performa **cukup baik**:
-  - `MAE (Mean Absolute Error)` rendah → prediksi cukup akurat.
-  - `R² Score` mendekati 1 → model menjelaskan sebagian besar variansi data.
-
----
-
-### 💡 Insight Tambahan
-- Hasil korelasi menunjukkan bahwa fitur seperti:
+## 🧩 Insight dari Korelasi (Correlation Heatmap)
+- Fitur yang berkorelasi positif terhadap jumlah produk dan lama buka:
   - 🍇 `fruits`
   - 🥕 `vegetables`
   - 🍖 `meat`
-  memiliki korelasi dengan jumlah produk dan lama buka pasar.
-- Informasi ini **bermanfaat untuk strategi pengembangan pasar baru** di masa depan.
-.
+- Heatmap korelasi memperlihatkan pola bahwa pasar yang menjual lebih banyak produk ini cenderung lebih sukses dan bertahan lama.
+
+## 🎯 Rekomendasi
+- Fokus pengembangan pasar baru sebaiknya pada produk-produk dengan korelasi tinggi seperti sayur, buah, dan daging.
+- Pertimbangkan pendekatan **segmentasi pasar** berbasis komposisi produk (clustering).
+- Model regresi sederhana bisa digunakan sebagai alat prediksi awal keberlangsungan pasar berdasarkan jumlah produk yang dijual.
+
+---
+
+🛠️ **Tools dan Library yang Digunakan:**
+- `pandas`, `matplotlib`, `seaborn`, `sklearn.linear_model`, `sklearn.metrics`
+- Teknik: Descriptive Analysis, Exploratory Data Analysis (EDA), Predictive Modeling, Correlation Analysis
