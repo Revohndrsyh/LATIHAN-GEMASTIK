@@ -49,5 +49,40 @@ Menggunakan model regresi untuk memprediksi variabel target `months_open` berdas
 
 ---
 
-### 🧠 Kesimpulan
-> Analisis yang digunakan mencakup pendekatan **deskriptif**, **eksploratif**, dan **prediktif**, untuk menggali wawasan dari data pasar serta membangun dasar model prediksi sederhana.
+## 🧠 Kesimpulan Analisis Data Pasar
+
+### 📦 Produk Utama yang Dijual
+- Produk yang paling umum dijual di pasar adalah:
+  - 🥬 Sayuran (`vegetables`)
+  - 🍎 Buah-buahan (`fruits`)
+  - 🍱 Makanan siap saji (`prepared`)
+- Produk yang jarang ditemukan di pasar:
+  - 🍷 Wine
+  - 🍄 Mushrooms
+  - 🧈 Tofu
+
+---
+
+### 📈 Hubungan Antara Produk & Lama Buka Pasar
+- Berdasarkan scatterplot antara `num_items_sold` dan `months_open`:
+  - Pasar yang menjual lebih banyak jenis produk **cenderung telah buka lebih lama**.
+  - Ada indikasi **pola positif**: pasar berkembang seiring waktu.
+
+---
+
+### 🤖 Hasil Prediksi & Evaluasi Model
+- Model **Linear Regression** digunakan untuk memprediksi `months_open` berdasarkan `num_items_sold`.
+- Hasil evaluasi menunjukkan performa **cukup baik**:
+  - `MAE (Mean Absolute Error)` rendah → prediksi cukup akurat.
+  - `R² Score` mendekati 1 → model menjelaskan sebagian besar variansi data.
+
+---
+
+### 💡 Insight Tambahan
+- Hasil korelasi menunjukkan bahwa fitur seperti:
+  - 🍇 `fruits`
+  - 🥕 `vegetables`
+  - 🍖 `meat`
+  memiliki korelasi dengan jumlah produk dan lama buka pasar.
+- Informasi ini **bermanfaat untuk strategi pengembangan pasar baru** di masa depan.
+.
